@@ -32,7 +32,7 @@ export default function AccountBalances({ address }: AccountBalancesProps) {
     return () => {
       unsubscribe && unsubscribe();
     };
-  }, [api, legacy, address]);
+  }, [api, legacy, address, setLoading]);
 
   const values = [
     {

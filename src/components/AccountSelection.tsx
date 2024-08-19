@@ -40,7 +40,7 @@ export default function AccountSelection() {
     }
 
     setSelectedAccount(accounts[0]);
-  }, [accounts]);
+  }, [accounts, selectedAccount]);
 
   if (!selectedAccount) {
     return <></>;
