@@ -116,6 +116,15 @@ export default function AccountSelection({
             </a>
             <ExternalLinkIcon className="mx-[2px]" />
           </div>
+          <div className="flex gap-2 items-center text-blue-500">
+            <a
+              href="https://onboard.popnetwork.xyz/"
+              target="_blank"
+            >
+              Onboard PAS to Pop Network Testnet Faucet
+            </a>
+            <ExternalLinkIcon className="mx-[2px]" />
+          </div>
         </>
       )}
     </div>

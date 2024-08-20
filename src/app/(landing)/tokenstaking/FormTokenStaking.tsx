@@ -68,11 +68,11 @@ export function FormTokenStaking() {
           render={({ field }) => (
             <FormItem>
               <div className="flex flex-col gap-2">
-                <p className="text-3xl">
+                <p className="lg:text-3xl">
                   Yield Farming/Token Staking dApp
                 </p>
               <AccountSelection/>
-                <p className="text-2xl">
+                <p className="lg:text-2xl">
                   36.5% (APY) - 0.1% Daily Earnings
                 </p>
               </div>
@@ -105,16 +105,18 @@ export function FormTokenStaking() {
             <p>Unstake All</p>
           </Button>
         </div>
-
-        <p className="text-2xl">
+          <div className="flex flex-col gap-2">
+          <p className="lg:text-2xl">
           Total Stake (by all users): 0 TestToken (Tst)
         </p>
 
         <p>My Stake: 0 TestToken (Tst)</p>
         <p>My Estimated Reward: 0.000 TestToken (Tst)</p>
         <p>My balance: 213212 TestToken (Tst)</p>
+          </div>
+       
 
-        <p className="text-2xl">FOR TESTING PURPOSE ONLY</p>
+        <p className="lg:text-2xl">FOR TESTING PURPOSE ONLY</p>
 
         <div className="flex sm:flex-row flex-col gap-2 w-full">
           <Button className="w-full " type="button">
@@ -125,10 +127,13 @@ export function FormTokenStaking() {
           </Button>
         </div>
 
-        <p>Selected Network private id: 57777</p>
+<div className="flex flex-col gap-2">
+<p>Selected Network private id: 57777</p>
         <p>Contract Balance: 121232 TestToken (Tst) </p>
 
         <p>Staking Contract address: 0x18219</p>
+</div>
+        
       </form>
     </Form>
   );
