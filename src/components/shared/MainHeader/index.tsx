@@ -9,9 +9,17 @@ import React from "react";
 export const MainHeader = () => {
   return (
     <header className="w-full border-b-2">
-      <div className="lg:w-[632px] flex items-center justify-end  mx-auto h-16 gap-4 px-4">
+      <div className=" flex items-center justify-end  mx-auto h-16 gap-4 px-4">
       
 
+        <ul className="flex items-center justify-center gap-2">
+        <li>
+            <Link href={'/'}>Home</Link>
+          </li>
+          <li>
+            <Link href={'/tokenstaking'}>Staking</Link>
+          </li>
+        </ul>
         <div className="flex gap-2">
           <ButtonConnectWallet />
 

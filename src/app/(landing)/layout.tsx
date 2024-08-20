@@ -32,7 +32,10 @@ export default function RootLayout({
             <WalletProvider>
             <ApiProvider>
             <MainHeader/>
+            <div className="min-h-screen lg:w-[632px] w-full mx-auto pt-10">
             {children}
+
+            </div>
             <MainFooter/>
             </ApiProvider>
             </WalletProvider>

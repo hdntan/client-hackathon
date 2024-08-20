@@ -1,8 +1,9 @@
 import { useWalletContext } from "@/providers/WalletProvider";
 import WalletSelection from "@/components/dialog/WalletSelection";
-import AccountSelection from "@/components/AccountSelection";
 import ConnectedWallet from "@/components/dialog/ConnectedWallet";
 import { Button } from "@/components/ui/button";
+import AccountSelection from "@/components/shared/AccountSelection";
+
 
 export default function MainBoard() {
   const { accounts, signOut } = useWalletContext();
@@ -28,7 +29,8 @@ export default function MainBoard() {
           <strong>{accounts.length}</strong> accounts connected
         </p>
       </div>
-      <AccountSelection />
+      <AccountSelection type="mainboard" />
+      
     </div>
   )
 }

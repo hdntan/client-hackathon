@@ -18,11 +18,19 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDownIcon, ExternalLinkIcon, PlusSquareIcon } from "lucide-react";
+import {
+  ChevronDownIcon,
+  ExternalLinkIcon,
+  PlusSquareIcon,
+} from "lucide-react";
 import clsx from "clsx";
 import AccountBalances from "@/components/AccountBalances";
 
-export default function AccountSelection() {
+export default function AccountSelection({
+  type = "account",
+}: {
+  type?: string;
+}) {
   const { accounts, injectedApi } = useWalletContext();
   const [selectedAccount, setSelectedAccount] = useState<InjectedAccount>();
   const accountsUpdateAvailable = useMemo(
@@ -61,12 +69,8 @@ export default function AccountSelection() {
     <div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <div
-            className="flex items-center justify-between gap-4 p-3 text-left cursor-pointer border-2"
-          >
-            <div
-              className="flex items-center gap-3"
-            >
+          <div className="flex items-center justify-between gap-4 p-3 text-left cursor-pointer border-2">
+            <div className="flex items-center gap-3">
               <div className="flex flex-col">
                 <p className="font-bold text-lg">{name}</p>
                 <p>{displayAddress}</p>
@@ -95,21 +99,25 @@ export default function AccountSelection() {
           )}
         </DropdownMenuContent>
       </DropdownMenu>
-      <AccountBalances address={address} />
-      <div 
-      className="flex my-4 gap-4 flex-wrap"
-     >
-        {/* <TransferBalanceButton fromAccount={selectedAccount} />
+      {type === "mainboard" && (
+        <>
+          <AccountBalances address={address} />
+          <div className="flex my-4 gap-4 flex-wrap">
+            {/* <TransferBalanceButton fromAccount={selectedAccount} />
         <SignRawMessageButton fromAccount={selectedAccount} />
         <CopyAddressButton address={address} /> */}
-      </div>
-      <div className="flex gap-2 items-center text-blue-500">
-        <a  href='https://paritytech.github.io/polkadot-testnet-faucet/' target="_blank">
-          Polkadot Testnet Faucet 
-        </a>
-        <ExternalLinkIcon className="mx-[2px]" />
-      </div>
-     
+          </div>
+          <div className="flex gap-2 items-center text-blue-500">
+            <a
+              href="https://paritytech.github.io/polkadot-testnet-faucet/"
+              target="_blank"
+            >
+              Polkadot Testnet Faucet
+            </a>
+            <ExternalLinkIcon className="mx-[2px]" />
+          </div>
+        </>
+      )}
     </div>
   );
 }
