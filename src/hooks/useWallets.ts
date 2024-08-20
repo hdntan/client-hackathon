@@ -51,12 +51,6 @@ const A_WALLETS: Wallet[] = [
     logo: '/polkadot-js-logo.svg',
     installUrl: '',
   }),
-  new ExtensionWallet({
-    name: 'Talisman',
-    id: 'talisman',
-    logo: '/talisman-logo.svg',
-    installUrl: '',
-  }),
 ];
 
 export default function useWallets(): Wallet[] {
