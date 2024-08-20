@@ -6,10 +6,10 @@ const MainFooter = () => {
     <div className=" border-t-2 ">
       <div className="flex sm:flex-row flex-col  lg:w-[632px] items-center justify-between mx-auto px-4 gap-4 py-4 ">
         <span>
-          Copyright &copy; 2024 <Link href="https://dedot.dev">dedot.dev</Link>
+          Copyright &copy; 2024 <Link href="#"></Link>
         </span>
         <div className="flex gap-6">
-          <a href="https://twitter.com/realsinzii" target="_blank">
+          <a href="#" >
             <svg
               width="24"
               aria-hidden="true"
@@ -27,7 +27,7 @@ const MainFooter = () => {
               ></path>
             </svg>
           </a>
-          <a href="https://github.com/dedotdev/trydedot" target="_blank">
+          <a href="#" >
             <svg
               width="24"
               aria-hidden="true"
